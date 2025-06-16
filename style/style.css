@@ -1,0 +1,467 @@
+/* Defining CSS variables for global use */
+:root {
+  --white: #fff;
+  --orange: #FF6A00;
+  --dark-gray: #1F1F1F;
+  --black: #000;
+  --a-hover: #2E2E2E;
+  --btn-hover: #FF6A00 + #FFFFFF;
+  --text: #333333;
+  --bg-color: #FAF8F5;
+  --tilte: #1A1A1A;
+}
+
+/* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  border: none;
+}
+
+/* Styling the body with background and typography */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+}
+
+/* Setting base font size to 62.5% of the browser default (usually 16px)
+   This makes 1rem = 10px, which simplifies rem calculations (e.g., 1.6rem = 16px) */
+html {
+  font-size: 62.5%;
+}
+
+/* Adding padding to sections */
+section {
+  padding: 4rem 4rem;
+}
+
+/* Header and footer base padding */
+header,
+footer {
+  padding: 2rem 4rem;
+}
+
+/* Heading level 1 style */
+h1 {
+  font-size: 3.8rem;
+  color: var(--black);
+  text-align: center;
+}
+
+/* Heading level 2 style */
+h2 {
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+
+/* Paragraph style */
+p {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+/* Base button style */
+button, .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  border-radius: .5rem;
+  background-color: var(--orange);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Button text color */
+.btn,
+.btn a {
+  color: var(--white);
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: var(--dark-gray);
+}
+
+/* Page Banner */
+.page-banner {
+  background-color: var(--white);
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--white);
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.banner-line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--orange);
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+/* Styling header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--orange);
+}
+
+#logo {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--dark-gray);
+  cursor: pointer;
+}
+
+/* Styling the main header */
+/* Navigation links in header */
+header .main-menu a {
+  font-size: 1.7rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-left: 3rem;
+}
+
+/* Navigation link hover effect */
+header .main-menu a:hover {
+  background-color: var(--a-hover);
+  border-radius: .5rem;
+  padding: 1rem;
+  transition: all .2s linear;
+}
+
+/* Media menu icon (hamburger) style */
+header i {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+/* Hide menu icon by default */
+#menu-icon {
+  display: none;
+}
+
+/* Styling footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  font-weight: 600;
+}
+
+footer span {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+
+/* Styling Books Slider section and search bar */
+.the-slider {
+  background: url(../images/book-banner-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.search-form input[type="search"] {
+  padding: 1rem 1.5rem;
+  width: 500px;
+  border: .2rem solid var(--orange);
+  border-radius: 25px;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+.search-form label {
+  margin-left: -3.5rem;
+  color: var(--orange);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fas.fa-search.inactive {
+  display: none;
+}
+
+/* Swiper-specific styles */
+.books-slider {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.books-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-slider .swiper-slide img {
+  width: 180px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-slider .swiper-slide:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling Wishlist section */
+.wishlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.wishlist .livre {
+  width: 250px;
+}
+
+/* Styling each div */
+.wishlist .livre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-gray, #f9f9f9);
+  border: 1px solid var(--gray, #ddd);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.wishlist .livre:hover {
+  transform: scale(1.02);
+}
+
+/* Book image */
+.wishlist .livre img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.wishlist .livre h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  text-align: center;
+  color: var(--dark, #333);
+}
+
+/* Paragraphs */
+.wishlist .livre p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  text-align: center;
+  color: var(--text-color, #555);
+}
+
+.wishlist .livre p strong {
+  color: var(--orange);
+}
+
+/* Button Delete */
+.wishlist .livre form {
+  margin-top: 1rem;
+}
+
+.wishlist .livre button {
+  background-color: var(--orange);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wishlist .livre button:hover {
+  background-color: var(--dark-gray);
+}
+
+/* Styling Results section*/
+/* Container holding all results */
+.search-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Individual book result */
+.resultat {
+  width: 260px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.resultat:hover {
+  transform: scale(1.02);
+}
+
+.resultat img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.resultat h2 {
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.resultat h3 {
+  font-size: 1rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.resultat .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.resultat .btn:hover {
+  background-color: var(--dark-gray);
+}
+
+.btn-retour{
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.btn-retour:hover {
+  color: var(--dark-gray);
+}
+
+/* Styling Details section */
+.detail {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--dark-gray);
+  font-family: sans-serif;
+}
+
+.detail img {
+  display: block;      
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.detail h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.detail p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.detail .btn {
+  display: block;
+  margin: 2rem auto; 
+  padding: 0.8rem 1.5rem;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.detail .btn:hover {
+  background-color: var(--dark-gray);
+}
+
+.detail .btn-retour {
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.detail .btn-retour:hover {
+  color: var(--dark-gray);
+}
