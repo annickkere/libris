@@ -11,6 +11,7 @@ $titre = isset($_GET['search-box']) ? trim($_GET['search-box']) : '';
 
 // Initialize the variable that will contain the search results
 $contenu_resultats = "";
+$contenu_resultats = "<a href='../index.html' class='btn-retour'>⬅Retour</a>";
 
 if (!empty($titre)) {
     // Prepare the SQL statement to search for books with titles similar to the search term
