@@ -58,6 +58,7 @@ $sql = "
 
 $result = mysqli_query($connection, $sql);
 $contenu_wishlist = "";
+$contenu_wishlist .= "<a href='javascript:history.back()' class='btn-retour'>⬅ Retour</a>";
 
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
